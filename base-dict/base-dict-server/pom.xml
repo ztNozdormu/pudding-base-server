@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>base-dict</artifactId>
+        <groupId>com.mohism.pudding</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>base-dict-server</artifactId>
+    <packaging>jar</packaging>
+
+    <name>base-dict-server</name>
+    <description>字典基础业务封装</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.mohism.pudding</groupId>
+            <artifactId>kernel-core</artifactId>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>cn.stylefeng.roses</groupId>-->
+<!--            <artifactId>kernel-scanner</artifactId>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>com.mohism.pudding</groupId>
+            <artifactId>base-dict-interface</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>base-dict-server</finalName>
+    </build>
+
+</project>
