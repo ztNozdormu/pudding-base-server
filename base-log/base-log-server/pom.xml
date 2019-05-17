@@ -3,17 +3,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>base-dict</artifactId>
+        <artifactId>base-log</artifactId>
         <groupId>com.mohism.pudding</groupId>
         <version>0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>base-dict-server</artifactId>
+    <artifactId>base-log-server</artifactId>
     <packaging>jar</packaging>
 
-    <name>base-dict-server</name>
-    <description>字典基础业务封装</description>
+    <name>base-log-server</name>
+    <description>日志服务的基础封装</description>
 
     <dependencies>
         <dependency>
@@ -22,17 +22,29 @@
         </dependency>
         <dependency>
             <groupId>com.mohism.pudding</groupId>
+            <artifactId>kernel-logger</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mohism.pudding</groupId>
             <artifactId>kernel-scanner</artifactId>
         </dependency>
         <dependency>
             <groupId>com.mohism.pudding</groupId>
-            <artifactId>base-dict-interface</artifactId>
+            <artifactId>base-log-interface</artifactId>
+            <version>0.0.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
-        <finalName>base-dict-server</finalName>
+        <finalName>base-log-server</finalName>
     </build>
-
 </project>

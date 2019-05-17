@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>pudding-base-server</artifactId>
@@ -8,14 +8,14 @@
         <version>0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>base-dict</artifactId>
+
+    <artifactId>base-file</artifactId>
     <packaging>pom</packaging>
 
-    <name>base-dict</name>
-    <description>字典模块</description>
+    <name>base-file</name>
+    <description>文件服务模块</description>
     <modules>
-        <module>base-dict-interface</module>
-        <module>base-dict-server</module>
+        <module>base-file-interface</module>
+        <module>base-file-server</module>
     </modules>
-
 </project>

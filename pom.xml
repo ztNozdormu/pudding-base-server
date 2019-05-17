@@ -9,6 +9,8 @@
   <version>0.0.1</version>
   <modules>
     <module>base-dict</module>
+    <module>base-file</module>
+      <module>base-log</module>
   </modules>
 
   <packaging>pom</packaging>
@@ -38,15 +40,14 @@
       <!--本项目的依赖管理-->
       <dependency>
         <groupId>com.mohism.pudding</groupId>
-        <artifactId>base-dict-server</artifactId>
+        <artifactId>base-dict-interface</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>com.mohism.pudding</groupId>
-        <artifactId>base-dict-interface</artifactId>
+        <artifactId>base-file-interface</artifactId>
         <version>${project.version}</version>
       </dependency>
-
       <!--本框架的依赖管理-->
       <dependency>
         <groupId>com.mohism.pudding</groupId>
@@ -68,11 +69,11 @@
         <artifactId>kernel-model</artifactId>
         <version>${pudding-kernel.version}</version>
       </dependency>
-<!--      <dependency>-->
-<!--        <groupId>com.mohism.pudding</groupId>-->
-<!--        <artifactId>kernel-scanner</artifactId>-->
-<!--        <version>${pudding-kernel.version}</version>-->
-<!--      </dependency>-->
+      <dependency>
+        <groupId>com.mohism.pudding</groupId>
+        <artifactId>kernel-scanner</artifactId>
+        <version>${pudding-kernel.version}</version>
+      </dependency>
 
       <!--spring cloud-->
       <dependency>
@@ -129,6 +130,7 @@
   </dependencies>
 
   <build>
+    <pluginManagement>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -185,6 +187,7 @@
         </executions>
       </plugin>
     </plugins>
+    </pluginManagement>
     <resources>
       <resource>
         <directory>src/main/resources</directory>
