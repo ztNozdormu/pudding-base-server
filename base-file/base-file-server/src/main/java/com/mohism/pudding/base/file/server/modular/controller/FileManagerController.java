@@ -8,6 +8,7 @@ import com.mohism.pudding.core.page.PageFactory;
 import com.mohism.pudding.core.reqres.request.RequestData;
 import com.mohism.pudding.core.reqres.response.ResponseData;
 import com.mohism.pudding.kernel.scanner.modular.annotation.PostResource;
+import com.mohism.pudding.kernel.scanner.modular.stereotype.ApiResource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +22,7 @@ import java.util.List;
  * @Date 2018/4/17 23:14
  */
 @RestController
-//@ApiResource(name = "文件后台管理", path = "/fileManager")
+@ApiResource(name = "文件后台管理", path = "/fileManager")
 @Slf4j
 public class FileManagerController {
 

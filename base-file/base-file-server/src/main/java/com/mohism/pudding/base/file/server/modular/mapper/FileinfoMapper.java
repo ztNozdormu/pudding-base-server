@@ -3,6 +3,7 @@ package com.mohism.pudding.base.file.server.modular.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mohism.pudding.base.file.api.entity.Fileinfo;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ import java.util.List;
  * @author fengshuonan
  * @since 2018-07-27
  */
+//@Mapper
 public interface FileinfoMapper extends BaseMapper<Fileinfo> {
 
     /**

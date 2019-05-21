@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mohism.pudding.base.dict.api.entity.Dict;
 import com.mohism.pudding.base.dict.api.model.DictInfo;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ import java.util.List;
  * @author fengshuonan
  * @since 2018-07-24
  */
+@Mapper
 public interface DictMapper extends BaseMapper<Dict> {
 
     /**

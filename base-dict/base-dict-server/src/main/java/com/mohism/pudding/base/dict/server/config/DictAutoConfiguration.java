@@ -24,15 +24,15 @@ public class DictAutoConfiguration {
     /**
      * 数据库初始化
      */
-    @Bean
-    public DictInitializer dictInitializer() {
-        return new DictInitializer();
-    }
+//    @Bean
+//    public DictInitializer dictInitializer() {
+//        return new DictInitializer();
+//    }
 
-    @Bean
-    public DictTypeInitializer dictTypeInitializer() {
-        return new DictTypeInitializer();
-    }
+//    @Bean
+//    public DictTypeInitializer dictTypeInitializer() {
+//        return new DictTypeInitializer();
+//    }
 
     /**
      * 控制器
