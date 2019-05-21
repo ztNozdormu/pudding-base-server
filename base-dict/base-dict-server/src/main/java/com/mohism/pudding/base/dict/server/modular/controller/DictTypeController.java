@@ -2,7 +2,6 @@ package com.mohism.pudding.base.dict.server.modular.controller;
 
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.mohism.pudding.base.dict.api.entity.Dict;
 import com.mohism.pudding.base.dict.api.entity.DictType;
 import com.mohism.pudding.base.dict.api.model.DictTypeInfo;
 import com.mohism.pudding.base.dict.server.modular.service.DictTypeService;
