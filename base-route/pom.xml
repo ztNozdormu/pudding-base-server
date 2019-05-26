@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>pudding-base-server</artifactId>
+        <groupId>com.mohism.pudding</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>base-route</artifactId>
+    <packaging>pom</packaging>
+    <name>base-route</name>
+    <!-- FIXME change it to the project's website -->
+    <url>spring cloud gateway动态路由设置管理</url>
+    <modules>
+        <module>base-route-interface</module>
+        <module>base-route-server</module>
+    </modules>
+
+
+</project>

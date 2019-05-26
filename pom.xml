@@ -11,6 +11,7 @@
     <module>base-dict</module>
     <module>base-file</module>
       <module>base-log</module>
+      <module>base-route</module>
   </modules>
 
   <packaging>pom</packaging>

@@ -1,0 +1,73 @@
+
+[
+    {
+        "route_id": "CompositeDiscoveryClient_GATEWAY-SERVICE",
+        "route_definition": {
+            "id": "CompositeDiscoveryClient_GATEWAY-SERVICE",
+            "predicates": [
+                {
+                    "name": "Path",
+                    "args": {
+                        "pattern": "/gateway-service/**"
+                    }
+                }
+            ],
+            "filters": [
+                {
+                    "name": "RewritePath",
+                    "args": {
+                        "regexp": "/gateway-service/(?<remaining>.*)",
+                        "replacement": "/${remaining}"
+                    }
+                }
+            ],
+            "uri": "lb://GATEWAY-SERVICE",
+            "order": 0
+        },
+        "order": 0
+    },
+    {
+        "route_id": "consumer-service",
+        "route_definition": {
+            "id": "consumer-service",
+            "predicates": [
+                {
+                    "name": "Path",
+                    "args": {
+                        "_genkey_0": "/consumer/**"
+                    }
+                }
+            ],
+            "filters": [
+                {
+                    "name": "TokenAuthenticationFilter",
+                    "args": {}
+                },
+                {
+                    "name": "StripPrefix",
+                    "args": {
+                        "_genkey_0": "1"
+                    }
+                },
+                {
+                    "name": "Hystrix",
+                    "args": {
+                        "name": "default",
+                        "fallbackUri": "forward:/defaultfallback"
+                    }
+                },
+                {
+                    "name": "RequestRateLimiter",
+                    "args": {
+                        "key-resolver": "#{@remoteAddrKeyResolver}",
+                        "redis-rate-limiter.replenishRate": "20",
+                        "redis-rate-limiter.burstCapacity": "20"
+                    }
+                }
+            ],
+            "uri": "lb://consumer-service",
+            "order": 0
+        },
+        "order": 0
+    }
+]
