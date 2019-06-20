@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>base-manager</artifactId>
+        <groupId>com.mohism.pudding</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>base-manager-server</artifactId>
+    <packaging>jar</packaging>
+    <name>base-manager-server</name>
+    <description>系统基础管理服务实现层</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.mohism.pudding</groupId>
+            <artifactId>kernel-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mohism.pudding</groupId>
+            <artifactId>kernel-scanner</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mohism.pudding</groupId>
+            <artifactId>base-manager-interface</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>base-manager-server</finalName>
+    </build>
+
+</project>

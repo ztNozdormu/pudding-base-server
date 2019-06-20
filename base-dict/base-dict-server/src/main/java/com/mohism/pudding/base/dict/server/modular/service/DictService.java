@@ -3,6 +3,7 @@ package com.mohism.pudding.base.dict.server.modular.service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.mohism.pudding.base.dict.api.DictApi;
 import com.mohism.pudding.base.dict.api.entity.Dict;
 import com.mohism.pudding.base.dict.api.model.DictInfo;
 import com.mohism.pudding.base.dict.api.model.TreeDictInfo;
@@ -30,7 +31,7 @@ import static com.mohism.pudding.base.dict.server.core.exception.DictExceptionEn
  * @since 2018-07-24
  */
 @Service
-public class DictService extends ServiceImpl<DictMapper, Dict> {
+public class DictService extends ServiceImpl<DictMapper, Dict>{
 
     /**
      * 新增字典

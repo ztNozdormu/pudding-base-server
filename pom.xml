@@ -10,13 +10,14 @@
   <modules>
     <module>base-dict</module>
     <module>base-file</module>
-      <module>base-log</module>
-      <module>base-route</module>
+    <module>base-log</module>
+    <module>base-route</module>
+    <module>base-manager</module>
   </modules>
 
   <packaging>pom</packaging>
   <name>pudding-base-server</name>
-  <description>基础业务服务，字典，文件，日志</description>
+  <description>基础业务服务，系统管理、字典，文件，日志</description>
   <url>https://github.com/ztNozdormu/pudding-kernel.git</url>
 
   <parent>
@@ -41,6 +42,11 @@
       <!--本项目的依赖管理-->
       <dependency>
         <groupId>com.mohism.pudding</groupId>
+        <artifactId>base-manager-interface</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mohism.pudding</groupId>
         <artifactId>base-dict-interface</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -63,11 +69,6 @@
       <dependency>
         <groupId>com.mohism.pudding</groupId>
         <artifactId>kernel-logger</artifactId>
-        <version>${pudding-kernel.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mohism.pudding</groupId>
-        <artifactId>kernel-model</artifactId>
         <version>${pudding-kernel.version}</version>
       </dependency>
       <dependency>

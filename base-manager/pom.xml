@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>pudding-base-server</artifactId>
+        <groupId>com.mohism.pudding</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>base-manager</artifactId>
+    <packaging>pom</packaging>
+
+    <name>base-manager</name>
+    <description>系统基础管理模块</description>
+    <modules>
+        <module>base-manager-interface</module>
+        <module>base-manager-server</module>
+    </modules>
+
+</project>
