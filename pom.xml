@@ -10,7 +10,7 @@
   <modules>
     <module>base-dict</module>
     <module>base-file</module>
-      <module>base-log</module>
+    <module>base-log</module>
   </modules>
 
   <packaging>pom</packaging>
