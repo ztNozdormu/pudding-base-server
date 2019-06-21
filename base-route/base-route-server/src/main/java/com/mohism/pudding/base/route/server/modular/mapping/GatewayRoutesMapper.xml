@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mohism.pudding.base.route.server.modular.mapper.GatewayRoutesMapper">
+  <resultMap id="BaseResultMap" type="com.mohism.pudding.base.route.entity.GatewayRoute">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="route_id" jdbcType="VARCHAR" property="routeId" />
+    <result column="route_uri" jdbcType="VARCHAR" property="routeUri" />
+    <result column="route_order" jdbcType="INTEGER" property="routeOrder" />
+    <result column="is_ebl" jdbcType="BIT" property="isEbl" />
+    <result column="is_del" jdbcType="BIT" property="isDel" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.mohism.pudding.base.route.entity.GatewayRoute">
+    <result column="predicates" jdbcType="LONGVARCHAR" property="predicates" />
+    <result column="filters" jdbcType="LONGVARCHAR" property="filters" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id AS id, route_id  AS routeId, route_uri AS routeUri, route_order AS routeOrder, is_ebl AS isEbl, is_del AS isDel, create_time AS createTime, update_time AS updateTime
+  </sql>
+  <sql id="Blob_Column_List">
+    predicates AS predicates, filters AS filters
+  </sql>
+
+
+  <!-- 获取所有已启用、未删除的路由信息 -->
+  <select id="getGatewayRouteList" resultType="com.mohism.pudding.base.route.entity.GatewayRoute">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from gateway_route
+    where
+    1=1
+    <if test="isDel != null">
+      and is_del=#{isDel,jdbcType=BIT}
+    </if>
+    <if test="isEbl != null">
+      and is_ebl=#{isEbl,jdbcType=BIT}
+    </if>
+    order by update_time desc
+  </select>
+
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mohism.pudding.base.route.server.modular.mapper.DynamicVersionMapper">
+  <resultMap id="BaseResultMap" type="com.mohism.pudding.base.route.entity.DynamicVersion">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id AS id, create_time AS createTime
+  </sql>
+  <select id="getLastVersion" resultType="java.lang.Long">
+    select max(id) from dynamic_version
+  </select>
+
+  <select id="getDynamicVersionList" resultType="com.mohism.pudding.base.route.entity.DynamicVersion">
+    select
+    <include refid="Base_Column_List" />
+    from dynamic_version
+    order by id desc
+  </select>
+</mapper>
